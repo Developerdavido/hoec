@@ -1,0 +1,76 @@
+name: ewc_hoe
+description: "A new project for heaven on earth conference at EWC church."
+
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+
+version: 1.0.1+2
+
+environment:
+  sdk: '>=3.3.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+
+
+  cupertino_icons: ^1.0.6
+  flutter_svg: ^2.0.10+1
+  flutter_animate: ^4.5.0
+  flutter_screenutil: ^5.9.3
+  gap: ^3.0.1
+  provider: ^6.1.2
+  firebase_core: ^3.4.0
+  flutter_multi_formatter: ^2.13.0
+  firebase_auth: ^5.2.0
+  get: ^4.6.6
+  cloud_firestore: ^5.4.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_launcher_icons: ^0.13.1
+
+flutter_launcher_icons:
+  android: "launcher_icon"
+  ios: true
+  image_path: "assets/image/ewc_icon.jpg"
+  adaptive_icon_background: "#000000"
+  adaptive_icon_foreground: "assets/image/android_icon.png"
+
+
+  flutter_lints: ^3.0.0
+
+# For information on the generic Dart part of this file, see the
+# following page: https://dart.dev/tools/pub/pubspec
+
+# The following section is specific to Flutter packages.
+flutter:
+
+  # The following line ensures that the Material Icons font is
+  # included with your application, so that you can use the icons in
+  # the material Icons class.
+  uses-material-design: true
+
+  assets:
+    - assets/svg/
+    - assets/image/
+
+
+  fonts:
+    - family: Geist
+      fonts:
+        - asset: fonts/Geist.ttf
+        - asset: fonts/Geist-Light.ttf
+          weight: 400
+        - asset: fonts/Geist-Thin.ttf
+          weight: 300
+        - asset: fonts/Geist-SemiBold.ttf
+          weight: 700
+        - asset: fonts/Geist-Bold.ttf
+          weight: 900
+    - family: Oswald
+      fonts:
+        - asset: fonts/Oswald-Regular.ttf
+          weight: 400
+
