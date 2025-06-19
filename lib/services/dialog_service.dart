@@ -68,8 +68,8 @@ class DialogService {
       message,
       snackPosition: SnackPosition.TOP,
       backgroundColor: AppColors.white,
-      margin: EdgeInsets.symmetric(horizontal: 20.w, vertical: 20.h),
-      padding: EdgeInsets.symmetric(horizontal: 16.w, vertical: 16.w),
+      margin: EdgeInsets.symmetric(horizontal: 20, vertical: 20),
+      padding: EdgeInsets.symmetric(horizontal: 16, vertical: 16),
       snackStyle: SnackStyle.FLOATING,
       overlayBlur: 10.h,
       overlayColor: AppColors.white.withOpacity(0.2),
@@ -79,7 +79,7 @@ class DialogService {
           color: AppColors.grey35,
           fontWeight: FontWeight.w700,
           fontFamily: "Geist",
-          fontSize: 16.sp,
+          fontSize: 18,
         ),
       ),
       messageText: Text(
@@ -88,7 +88,7 @@ class DialogService {
           color: AppColors.grey35,
           fontWeight: FontWeight.w700,
           fontFamily: "Geist",
-          fontSize: 14.sp,
+          fontSize: 16,
         ),
       ),
     );

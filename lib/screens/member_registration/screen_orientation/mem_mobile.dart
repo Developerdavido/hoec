@@ -11,6 +11,7 @@ import 'package:provider/provider.dart';
 import '../../../constants/colors.dart';
 import '../../../constants/strings.dart';
 import '../../../providers/auth_provider.dart' as auth;
+import '../../../services/dialog_service.dart';
 import '../../../shared_widgets/default_back_icon.dart';
 import '../../../shared_widgets/default_button.dart';
 import '../../../shared_widgets/default_loader.dart';
@@ -32,6 +33,7 @@ class _MemberRegistrationMobileState extends State<MemberRegistrationMobile> {
   final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
   TextEditingController phoneCtrl = TextEditingController();
   TextEditingController nameCtrl = TextEditingController();
+  final DialogService dialog = DialogService();
   auth.AuthProvider? authVm;
 
 
@@ -63,13 +65,13 @@ class _MemberRegistrationMobileState extends State<MemberRegistrationMobile> {
               children: [
                 Gap(20.h),
                 Padding(
-                  padding: EdgeInsets.symmetric(horizontal: 16.0.w),
+                  padding: EdgeInsets.symmetric(horizontal: 0.1.sw),
                   child: const DefaultBackButton(),
                 ),
                 Expanded(
                   child: SingleChildScrollView(
                     child: Padding(
-                      padding: EdgeInsets.symmetric(horizontal: 16.0.w),
+                      padding: EdgeInsets.symmetric(horizontal: 0.1.sw),
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
@@ -79,7 +81,7 @@ class _MemberRegistrationMobileState extends State<MemberRegistrationMobile> {
                             fontFamily: "Geist",
                             fontWeight: FontWeight.w800,
                             textColor: AppColors.black,
-                            fontSize: 20.sp,
+                            fontSize: 24,
                             letterSpacing: -0.41,
                             lineHeight: 1.33,
                             textAlign: TextAlign.left,
@@ -97,7 +99,7 @@ class _MemberRegistrationMobileState extends State<MemberRegistrationMobile> {
                             fontFamily: "Geist",
                             fontWeight: FontWeight.w400,
                             textColor: AppColors.black,
-                            fontSize: 16.sp,
+                            fontSize: 18,
                             letterSpacing: -0.41,
                             lineHeight: 1.33,
                             textAlign: TextAlign.left,
@@ -138,8 +140,9 @@ class _MemberRegistrationMobileState extends State<MemberRegistrationMobile> {
                         final phoneNumber = phoneCtrl.text.trim();
                         final success  = await authVm.registerAttendee(name: name, phone: phoneNumber);
                         if(success){
-                          FirebaseAuth.instance.signOut();
-                          Get.off(()=> const SavedInfo());
+                          //FirebaseAuth.instance.signOut();
+                          Get.back();
+                          dialog.showSnackBar(AppStrings.successfulReg, AppStrings.successfulRegMsg);
                         }
                       }
                     },

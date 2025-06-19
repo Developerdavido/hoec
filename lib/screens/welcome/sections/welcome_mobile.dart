@@ -30,7 +30,7 @@ class _WelcomeMobileState extends State<WelcomeMobile> {
               left: 0,
               right: 0,
               child: Image.asset(
-                Media.hoec,
+                Media.sitg,
                 height: 0.65.sh,
                 width: 1.sw,
                 fit: BoxFit.fill,

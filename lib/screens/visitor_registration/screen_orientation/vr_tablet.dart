@@ -11,6 +11,7 @@ import 'package:provider/provider.dart';
 
 import '../../../constants/colors.dart';
 import '../../../constants/strings.dart';
+import '../../../services/dialog_service.dart';
 import '../../../shared_widgets/default_back_icon.dart';
 import '../../../shared_widgets/default_button.dart';
 import '../../../shared_widgets/default_loader.dart';
@@ -31,6 +32,8 @@ class _VisitorRegistrationTabletState extends State<VisitorRegistrationTablet> {
   TextEditingController phoneCtrl = TextEditingController();
   TextEditingController addressCtrl = TextEditingController();
 
+  final DialogService dialog = DialogService();
+
   @override
   void dispose() {
     // TODO: implement dispose
@@ -50,7 +53,7 @@ class _VisitorRegistrationTabletState extends State<VisitorRegistrationTablet> {
         body: Stack(
           children: [
             Padding(
-              padding: EdgeInsets.symmetric(horizontal: 0.15.sw),
+              padding: EdgeInsets.symmetric(horizontal: 0.25.sw),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
@@ -58,8 +61,8 @@ class _VisitorRegistrationTabletState extends State<VisitorRegistrationTablet> {
                   Padding(
                     padding: EdgeInsets.symmetric(horizontal: 16.0.w),
                     child: DefaultBackButton(
-                      height: 70.h,
-                      width: 70.h,
+                      height: 70,
+                      width: 70,
                     ),
                   ),
                   Expanded(
@@ -75,7 +78,7 @@ class _VisitorRegistrationTabletState extends State<VisitorRegistrationTablet> {
                               fontFamily: "Geist",
                               fontWeight: FontWeight.w800,
                               textColor: AppColors.black,
-                              fontSize: 16.sp,
+                              fontSize: 18,
                               letterSpacing: -0.41,
                               lineHeight: 1.33,
                               textAlign: TextAlign.left,
@@ -93,7 +96,7 @@ class _VisitorRegistrationTabletState extends State<VisitorRegistrationTablet> {
                               fontFamily: "Geist",
                               fontWeight: FontWeight.w400,
                               textColor: AppColors.black,
-                              fontSize: 12.sp,
+                              fontSize: 16,
                               letterSpacing: -0.41,
                               lineHeight: 1.33,
                               textAlign: TextAlign.left,
@@ -136,14 +139,15 @@ class _VisitorRegistrationTabletState extends State<VisitorRegistrationTablet> {
                           final address = addressCtrl.text.trim();
                           final success  = await authVm.registerAttendee(name: name, phone: phoneNumber, homeAddress: address);
                           if(success){
-                            FirebaseAuth.instance.signOut();
-                            Get.off(()=> const SavedInfo());
+                            //FirebaseAuth.instance.signOut();
+                            Get.back();
+                            dialog.showSnackBar(AppStrings.successfulReg, AppStrings.successfulRegMsg);
                           }
                         }
                       },
                       btnText: AppStrings.submit,
-                      height: 74.h,
-                      btnSize: 12.sp,
+                      height: 74,
+                      btnSize: 16,
                       btnColor: AppColors.primaryColor,
                       btnTextColor: AppColors.white,
                     ),

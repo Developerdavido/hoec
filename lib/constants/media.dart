@@ -7,5 +7,6 @@ abstract class Media {
 
   static const clipboard = '$_baseSvg/clipboard.svg';
   static const hoec = '$_baseImage/hoec.png';
+  static const sitg = '$_baseImage/sitg.JPG';
   static const ewcLogo = '$_baseImage/ewc_logo.png';
 }

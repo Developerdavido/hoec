@@ -31,7 +31,7 @@ class _WelcomeTabletState extends State<WelcomeTablet> {
             width: 0.5.sw,
             color: AppColors.borderColor,
             child: Image.asset(
-              Media.hoec,
+              Media.sitg,
               height: 1.sh,
               width: 0.5.sw,
               fit: BoxFit.fill,

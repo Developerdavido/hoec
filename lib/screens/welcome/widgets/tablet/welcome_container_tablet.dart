@@ -18,7 +18,7 @@ class WelcomeContainerTablet extends StatelessWidget {
     return Container(
       height: 316.h,
       padding: EdgeInsets.symmetric(horizontal: 10.w, vertical: 20.h),
-      color: AppColors.primaryColor,
+      color: AppColors.black,
       child: Column(
         mainAxisSize: MainAxisSize.min,
         mainAxisAlignment: MainAxisAlignment.center,

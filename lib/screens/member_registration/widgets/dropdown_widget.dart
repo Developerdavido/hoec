@@ -34,7 +34,7 @@ class _DropDownWidgetState extends State<DropDownWidget> {
           data: widget.title ?? "",
           fontWeight: FontWeight.w400,
           textColor: AppColors.grey35,
-          fontSize: 14.sp,
+          fontSize: 16,
           letterSpacing: -0.48,
           lineHeight: 1.2,
         ),
@@ -46,7 +46,7 @@ class _DropDownWidgetState extends State<DropDownWidget> {
             });
           },
           child: Container(
-            padding: EdgeInsets.symmetric(horizontal: 12.w, vertical: 16.h),
+            padding: EdgeInsets.symmetric(horizontal: 4.w, vertical: 12.h),
             decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(32.r),
                 color: AppColors.white,
@@ -59,14 +59,14 @@ class _DropDownWidgetState extends State<DropDownWidget> {
                     fontWeight: FontWeight.w500,
                     textColor:
                         widget.selectedItem == null ? AppColors.grey35 : AppColors.black,
-                    fontSize: 14.sp,
+                    fontSize: 16,
                     letterSpacing: -0.48,
                     lineHeight: 1.2,
                   ),
                 ),
                 Icon(
                   _isVisible ? CupertinoIcons.chevron_up : CupertinoIcons.chevron_down,
-                  size: 12.sp,
+                  size: 12,
                   color: _isVisible ? AppColors.primaryColor : AppColors.black,
                 ),
               ],
@@ -77,7 +77,7 @@ class _DropDownWidgetState extends State<DropDownWidget> {
         Visibility(
           visible : _isVisible,
           child: Container(
-            padding: EdgeInsets.symmetric(vertical: 12.h, horizontal: 16.w),
+            padding: EdgeInsets.symmetric(vertical: 8, horizontal: 8),
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(16.r),
               color: AppColors.white,
@@ -99,7 +99,7 @@ class _DropDownWidgetState extends State<DropDownWidget> {
                       data: item ?? "",
                       fontWeight: FontWeight.w500,
                       textColor: AppColors.black,
-                      fontSize: 16.sp,
+                      fontSize: 16,
                       letterSpacing: -0.48,
                       lineHeight: 1.2,
                     ),

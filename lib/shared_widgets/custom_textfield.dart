@@ -61,7 +61,7 @@ class CustomTextField extends StatelessWidget {
       minLines: expandable ? 1 : null,
       onTap: onTap,
       style: TextStyle(
-        fontSize: 14.sp,
+        fontSize: 14,
         fontFamily: "Geist",
         color: AppColors.black,
         fontWeight: FontWeight.w400,
@@ -92,7 +92,7 @@ class CustomTextField extends StatelessWidget {
           ),
         ),
         errorStyle: TextStyle(
-          fontSize: 14.sp,
+          fontSize: 14,
           fontFamily: "Geist",
           color: AppColors.primaryColor,
           fontWeight: FontWeight.w400,
@@ -100,7 +100,7 @@ class CustomTextField extends StatelessWidget {
           height: 1.2,
         ),
         labelStyle: TextStyle(
-          fontSize: 14.sp,
+          fontSize: 14,
           fontFamily: "Geist",
           color: AppColors.black,
           fontWeight: FontWeight.w400,
@@ -109,7 +109,7 @@ class CustomTextField extends StatelessWidget {
         ),
         suffixIcon: suffixIcon,
         hintStyle: TextStyle(
-          fontSize: 14.sp,
+          fontSize: 14,
           fontFamily: "Geist",
           color: AppColors.hintColor,
           fontWeight: FontWeight.w400,
@@ -118,7 +118,7 @@ class CustomTextField extends StatelessWidget {
         ),
         prefix: prefix,
         prefixIcon: prefixIcon,
-        contentPadding: const EdgeInsets.symmetric(horizontal: 12, vertical: 16),
+        //contentPadding: const EdgeInsets.symmetric(horizontal: 12, vertical: 16),
       ),
       inputFormatters: inputFormatters,
       validator: defaultValidation
