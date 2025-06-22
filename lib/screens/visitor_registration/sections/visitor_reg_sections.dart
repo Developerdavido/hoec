@@ -37,6 +37,18 @@ class VisitorRegSection extends StatelessWidget {
             controller: phoneController! ,
             keyboardType: TextInputType.phone,
             hintText: 'Enter your phone number',
+            validator: (value){
+              //if value is null or is empty
+              if(value == null || value.isEmpty) {
+                return "The phone number field must not be empty";
+              }
+              //if value does not match regex
+              RegExp validPhone = RegExp(r'^(\+233|233|0)[0-9]{9}$');
+              if(!validPhone.hasMatch(value)) {
+                return "Invalid phone number";
+              }
+              return null;
+            },
           ),
           Gap(8.h),
           InputField(

@@ -2,7 +2,7 @@ abstract class AppStrings {
 
 
   static const welcomeMsg = "Welcome to EWC's Stand in the Gap '2025";
-  static const trademark = "\u00a9 2024 Empowerment Worship Center. All Rights Reserved";
+  static const trademark = "\u00a9 2025 Empowerment Worship Center. All Rights Reserved";
 
 
 
