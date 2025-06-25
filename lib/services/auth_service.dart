@@ -27,5 +27,7 @@ class AuthService {
     'East Airport Campus',
     'Kumasi Campus',
     'Takoradi Campus',
+    'Kwabenya Campus',
+    'Amasaman Campus'
   ];
 }
